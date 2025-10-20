@@ -34,7 +34,7 @@ A super simple FastAPI application that allows students to view and sign up for 
 
 ## Data Model
 
-The application uses a simple data model with meaningful identifiers:
+Activities are now stored in `activities.json` for easy management by teachers and administrators:
 
 1. **Activities** - Uses activity name as identifier:
 
@@ -47,4 +47,8 @@ The application uses a simple data model with meaningful identifiers:
    - Name
    - Grade level
 
-All data is stored in memory, which means data will be reset when the server restarts.
+### Managing Activities
+
+Teachers can now easily modify activities by editing the `activities.json` file. The system automatically loads activities from this file and saves any changes (signups/unregistrations) back to the file.
+
+All data persists between server restarts.
